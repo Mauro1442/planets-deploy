@@ -63,22 +63,26 @@ const moon = new THREE.Mesh(
   new THREE.SphereGeometry(1, 32, 32),
   new THREE.MeshStandardMaterial({ map: moonTexture })
 );
+
 scene.add(moon);
+
+//pivot
 
 //function
 
 function animate() {
   requestAnimationFrame(animate);
-
+  const time = 0.0001 * performance.now();
   torus.rotation.x += 0.0;
   torus.rotation.y += 0.01;
   torus.rotation.z += 0.0;
+  moon.position.x = -Math.cos(1 * time) * 27;
+  moon.position.z = Math.sin(1 * time) * 27;
+  moon.rotation.y += 0.0017;
 
   earth.rotation.y += 0.01;
 
-  moon.position.x = -40;
   controls.update();
-
   renderer.render(scene, camera);
 }
 function moveCamera() {
