@@ -1,0 +1,1 @@
+canvas{width:100vw;height:100vh;display:block;position:fixed;top:0;left:0;z-index:-9999}main{width:100vw;color:#fff;z-index:99;position:absolute;width:100%;margin:0 auto;padding:120px,0px;display:grid}h1,h2,p{font-family:Lucida Sans,Lucida Sans Regular,Lucida Grande,Lucida Sans Unicode,Geneva,Verdana,sans-serif;color:#fff;background-color:#00f;width:20%}app{display:flexbox}
